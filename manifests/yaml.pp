@@ -14,8 +14,11 @@ class role_burp::yaml (
   $server_can_restore = "1",
 
 # client: create client config files in /etc/clientconfdir for Linux clients
-  $includes = "/home",
-  $excludes = "/tmp",
+burp::client::includes:  
+  "/home"
+  
+burp::client::excludes: 
+  "/tmp"
   $options  = "",
   $password = "password",
   $cron     = true,
