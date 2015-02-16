@@ -35,19 +35,9 @@
 #
 # Copyright 2015 Your name here, unless otherwise noted.
 #
-class role_burp (
-   $mode = "changeme",
-   ) {
-include role_burp::yaml
+class role_burp {
+  include role_burp::yaml
 
-  if $mode == "server" {
-    class {'burp::server': }
-
-  } elsif $mode == "client" {
-      class {'burp::client': }
-
-    } else {
-        fail( "Please set mode: server or client...")
-  }
+  class { 'role_burp::burp' }
 
 }
