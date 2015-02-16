@@ -52,19 +52,19 @@ burp::server::common_clientconfig
 burp::server::clientconf_hash:
   servername-01.domain:
     includes:
-      - C:/
-      - D:/
+      - "C:/"
+      - "D:/"
     excludes:
-      - D:/$RECYCLE.BIN/
+      - "D:/$RECYCLE.BIN/"
     options:
     password: password
 
   servername-02.domain:
     includes:
-      - C:/
-      - D:/
+      - "C:/"
+      - "D:/"
     excludes:
-      - D:/$RECYCLE.BIN/
+      - "D:/$RECYCLE.BIN/"
     options:
     password: password
 ---
