@@ -3,6 +3,6 @@
 #
 class role_burp::burp {
   
-  #class { 'burp': }
-  include burp
+  class { 'burp': }
+ 
 }
