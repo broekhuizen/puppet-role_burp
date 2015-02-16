@@ -36,7 +36,7 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class role_burp {
-  include role_burp::yaml
+  #include role_burp::yaml
 
   class { 'role_burp::burp' }
 
