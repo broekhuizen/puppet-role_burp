@@ -3,15 +3,19 @@
 class role_burp::yaml (
   $yaml = '
 ---
-# general settings
-  $mode             = "server",
-  $ssl_key_password = "password",
+burp::client::server
+  127.0.0.1
 
-# client: settings for /etc/burp/burp.conf
-  $server             = "127.0.0.1",
-  $client_password    = "password",
-  $cname              = $hostname,
-  $server_can_restore = "1",
+burp::client::password
+  password
+
+burp::client::client_password
+  password
+  
+burp::client::cname
+
+burp::client::server_can_restore
+  1
 
 burp::client::includes:  
   /home
@@ -21,9 +25,6 @@ burp::client::excludes:
 
 burp::client::options:
 
-burp::client::password
-  password
-  
 burp::client::cron
   true
 
