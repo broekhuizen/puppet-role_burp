@@ -38,6 +38,6 @@
 class role_burp {
   #include role_burp::yaml
 
-  class { 'role_burp::burp' }
+  class { 'role_burp::burp': }
 
 }
