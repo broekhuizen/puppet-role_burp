@@ -18,10 +18,10 @@ burp::client::server_can_restore
   1
 
 burp::client::includes:  
-  /home
+  "/home"
   
 burp::client::excludes: 
-  /tmp
+  "/tmp"
 
 burp::client::options:
 
@@ -29,7 +29,7 @@ burp::client::cron
   true
 
 burp::server::directory 
-  /mnt/backup/burpdata
+  "/mnt/backup/burpdata"
   
 burp::server::max_children      
   25
