@@ -2,10 +2,12 @@
 #
 #
 class role_burp::main (
-  $mode = $role_burp::yaml::parameters['role_burp::main::mode'],
+  $mode            = $role_burp::yaml::parameters['role_burp::main::mode'],
+  $clientconf_hash = $role_burp::yaml::parameters['role_burp::main::clientconf_hash'],
   ) {
   class { 'burp':
-    mode => $mode,
+    mode            => $mode,
+    clientconf_hash => $clientconf_hash,
   }
   
 }
