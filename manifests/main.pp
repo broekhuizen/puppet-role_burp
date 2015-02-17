@@ -4,7 +4,8 @@
 class role_burp::main (
   $server = $role_burp::yaml::parameters['role_burp::server'],
   ) {
-  class { 'burp': }
+  class { 'burp':
     server => $server,
- 
+  }
+  
 }
