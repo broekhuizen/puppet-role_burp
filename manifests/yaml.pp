@@ -3,7 +3,7 @@
 class role_burp::yaml (
   $yaml = '
 ---
-role_burp::server: 127.0.0.1
+role_burp::mode: client
 
 ---
 ') {
