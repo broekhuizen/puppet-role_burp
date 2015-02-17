@@ -2,10 +2,10 @@
 #
 #
 class role_burp::main (
-  $server = $role_burp::yaml::parameters['role_burp::server'],
+  $mode = $role_burp::yaml::parameters['role_burp::mode'],
   ) {
   class { 'burp':
-    server => $server,
+    mode => $mode,
   }
   
 }
