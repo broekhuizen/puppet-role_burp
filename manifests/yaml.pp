@@ -3,7 +3,7 @@
 class role_burp::yaml (
   $yaml = '
 ---
-burp::server: 127.0.0.1
+role_burp::server: 127.0.0.1
 burp::password: password
 burp::server_can_restore: 1
 burp::includes: "/home"
