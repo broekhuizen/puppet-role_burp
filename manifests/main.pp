@@ -10,7 +10,7 @@ class role_burp::main (
   $backup_stats_logstash = $role_burp::yaml::parameters['role_burp::main::backup_stats_logstash'],
   $includes              = $role_burp::yaml::parameters['role_burp::main::includes'],
   $excludes              = $role_burp::yaml::parameters['role_burp::main::excludes'],
-  $extra_options         = $role_burp::yaml::parameters['role_burp::main::clientside_options'],
+  $extra_options         = $role_burp::yaml::parameters['role_burp::main::extra_options'],
   ) {
   
   class { 'burp':
@@ -22,7 +22,7 @@ class role_burp::main (
     backup_stats_logstash => $backup_stats_logstash,
     includes              => $includes,
     excludes              => $excludes,
-    extra_options         => $serverside_options,
+    extra_options         => $extra_options,
   }
   
 }
