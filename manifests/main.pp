@@ -4,6 +4,7 @@
 class role_burp::main (
   $server                  = $role_burp::yaml::parameters['role_burp::main::server'],
   $client                  = $role_burp::yaml::parameters['role_burp::main::client'],
+  $cname                   = $role_burp::yaml::parameters['role_burp::main::cname'],
   $directory               = $role_burp::yaml::parameters['role_burp::main::directory'],
   $client_ssl_key_password = $role_burp::yaml::parameters['role_burp::main::client_ssl_key_password'],
   $server_ssl_key_password = $role_burp::yaml::parameters['role_burp::main::server_ssl_key_password'],
@@ -18,8 +19,9 @@ class role_burp::main (
   ) {
   
   class { 'burp':
-    client                  => $client,
     server                  => $server,
+    client                  => $client,
+    cname                   => $cname,
     directory               => $directory,
     client_ssl_key_password => $client_ssl_key_password,
     server_ssl_key_password => $server_ssl_key_password,
