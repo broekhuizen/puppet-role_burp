@@ -2,11 +2,13 @@
 #
 #
 class role_burp::main (
+  $server                  = $role_burp::yaml::parameters['role_burp::main::server'],
+  $client                  = $role_burp::yaml::parameters['role_burp::main::client'],
   $directory               = $role_burp::yaml::parameters['role_burp::main::directory'],
   $client_ssl_key_password = $role_burp::yaml::parameters['role_burp::main::client_ssl_key_password'],
   $server_ssl_key_password = $role_burp::yaml::parameters['role_burp::main::server_ssl_key_password'],
   $password                = $role_burp::yaml::parameters['role_burp::main::password'],
-  $server                  = $role_burp::yaml::parameters['role_burp::main::server'],
+  $server_ip               = $role_burp::yaml::parameters['role_burp::main::server_ip'],
   $clientconf_hash         = $role_burp::yaml::parameters['role_burp::main::clientconf_hash'],
   $backup_stats_logstash   = $role_burp::yaml::parameters['role_burp::main::backup_stats_logstash'],
   $includes                = $role_burp::yaml::parameters['role_burp::main::includes'],
@@ -16,11 +18,13 @@ class role_burp::main (
   ) {
   
   class { 'burp':
+    client                  => $client,
+    server                  => $server,
     directory               => $directory,
     client_ssl_key_password => $client_ssl_key_password,
     server_ssl_key_password => $server_ssl_key_password,
     password                => $password,
-    server                  => $server,
+    server_ip               => $server_ip,
     clientconf_hash         => $clientconf_hash,
     backup_stats_logstash   => $backup_stats_logstash,
     includes                => $includes,
